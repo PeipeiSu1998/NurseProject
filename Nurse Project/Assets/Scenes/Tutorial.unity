@@ -13129,6 +13129,7 @@ GameObject:
   - component: {fileID: 550618680}
   - component: {fileID: 550618679}
   - component: {fileID: 550618678}
+  - component: {fileID: 550618681}
   m_Layer: 0
   m_Name: Button2
   m_TagString: Untagged
@@ -13208,6 +13209,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 550618676}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &550618681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550618676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7efe7cc7d9178ff43a6dfa08f30183fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materasso_head_animator: {fileID: 38600490}
+  materasso_thigh_animator: {fileID: 1134126906}
+  materasso_leg_animator: {fileID: 1542538774}
+  controllerStateManagers:
+  - {fileID: 889851164}
 --- !u!1 &551025326
 GameObject:
   m_ObjectHideFlags: 0
@@ -16440,6 +16458,25 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 39
   triggerInteraction: 0
+--- !u!1 &889851163 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1656971749961232, guid: 0bb103b515847514e866aa26155cc4b8,
+    type: 3}
+  m_PrefabInstance: {fileID: 991463116}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &889851164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889851163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e230b966fafafc4c9433c4fb79c3de5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerTouched: 0
 --- !u!1001 &893913720
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16809,6 +16846,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   materasso_head_animator: {fileID: 38600490}
+  materasso_thigh_animator: {fileID: 1134126906}
+  materasso_leg_animator: {fileID: 1542538774}
+  controllerStateManagers:
+  - {fileID: 889851164}
 --- !u!1 &900114459
 GameObject:
   m_ObjectHideFlags: 0
@@ -18517,11 +18558,11 @@ PrefabInstance:
         type: 3}
       propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 894990163}
+      objectReference: {fileID: 889851164}
     - target: {fileID: 114618895607339392, guid: 0bb103b515847514e866aa26155cc4b8,
         type: 3}
       propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ButtonPressedAction
+      value: TriggerTouched
       objectReference: {fileID: 0}
     - target: {fileID: 114618895607339392, guid: 0bb103b515847514e866aa26155cc4b8,
         type: 3}
@@ -18542,11 +18583,11 @@ PrefabInstance:
         type: 3}
       propertyPath: Deactivated.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 894990163}
+      objectReference: {fileID: 889851164}
     - target: {fileID: 114618895607339392, guid: 0bb103b515847514e866aa26155cc4b8,
         type: 3}
       propertyPath: Deactivated.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ButtonReleasedAction
+      value: TriggerReleased
       objectReference: {fileID: 0}
     - target: {fileID: 114618895607339392, guid: 0bb103b515847514e866aa26155cc4b8,
         type: 3}
@@ -18853,6 +18894,7 @@ GameObject:
   - component: {fileID: 1046580411}
   - component: {fileID: 1046580410}
   - component: {fileID: 1046580409}
+  - component: {fileID: 1046580412}
   m_Layer: 0
   m_Name: Button4
   m_TagString: Untagged
@@ -18932,6 +18974,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1046580407}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1046580412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046580407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7efe7cc7d9178ff43a6dfa08f30183fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materasso_head_animator: {fileID: 38600490}
+  materasso_thigh_animator: {fileID: 1134126906}
+  materasso_leg_animator: {fileID: 1542538774}
+  controllerStateManagers:
+  - {fileID: 889851164}
 --- !u!114 &1054282510 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6759483569300406686, guid: 52f87534fdefc6b47aadeae3a66454d8,
@@ -19687,8 +19746,9 @@ GameObject:
   - component: {fileID: 1134126903}
   - component: {fileID: 1134126905}
   - component: {fileID: 1134126904}
+  - component: {fileID: 1134126906}
   m_Layer: 0
-  m_Name: Materasso_Leg1
+  m_Name: Materasso_thigh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19753,6 +19813,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1134126902}
   m_Mesh: {fileID: 4300256, guid: 598dd9f4158ac0840ba9aaef979f8a89, type: 3}
+--- !u!95 &1134126906
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1134126902}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5cbcec92ba4af83479b519c8ed6b0976, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1134804264
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21823,6 +21902,7 @@ GameObject:
   - component: {fileID: 1424947737}
   - component: {fileID: 1424947736}
   - component: {fileID: 1424947735}
+  - component: {fileID: 1424947738}
   m_Layer: 0
   m_Name: Button3
   m_TagString: Untagged
@@ -21902,6 +21982,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1424947733}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1424947738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424947733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7efe7cc7d9178ff43a6dfa08f30183fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materasso_head_animator: {fileID: 38600490}
+  materasso_thigh_animator: {fileID: 1134126906}
+  materasso_leg_animator: {fileID: 1542538774}
+  controllerStateManagers:
+  - {fileID: 889851164}
 --- !u!1 &1436424241
 GameObject:
   m_ObjectHideFlags: 0
@@ -22767,8 +22864,9 @@ GameObject:
   - component: {fileID: 1542538771}
   - component: {fileID: 1542538773}
   - component: {fileID: 1542538772}
+  - component: {fileID: 1542538774}
   m_Layer: 0
-  m_Name: Materasso_Leg2
+  m_Name: Materasso_leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22833,6 +22931,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1542538770}
   m_Mesh: {fileID: 4300256, guid: 598dd9f4158ac0840ba9aaef979f8a89, type: 3}
+--- !u!95 &1542538774
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1542538770}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1337f3de948b2eb4ca806e43da9465da, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1564740221
 GameObject:
   m_ObjectHideFlags: 0
@@ -26106,6 +26223,7 @@ GameObject:
   - component: {fileID: 1877960566}
   - component: {fileID: 1877960565}
   - component: {fileID: 1877960564}
+  - component: {fileID: 1877960567}
   m_Layer: 0
   m_Name: Button5
   m_TagString: Untagged
@@ -26185,6 +26303,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1877960562}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1877960567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877960562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7efe7cc7d9178ff43a6dfa08f30183fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materasso_head_animator: {fileID: 38600490}
+  materasso_thigh_animator: {fileID: 1134126906}
+  materasso_leg_animator: {fileID: 1542538774}
+  controllerStateManagers:
+  - {fileID: 889851164}
 --- !u!1 &1879263336
 GameObject:
   m_ObjectHideFlags: 0
@@ -27363,21 +27498,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 960702652617744129, guid: 114b3c3ce4645364a97c8f0803bed65b,
-        type: 3}
-      propertyPath: elements.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 960702652617744129, guid: 114b3c3ce4645364a97c8f0803bed65b,
-        type: 3}
-      propertyPath: elements.Array.data[0]
-      value: 
-      objectReference: {fileID: 747871747}
-    - target: {fileID: 960702652617744129, guid: 114b3c3ce4645364a97c8f0803bed65b,
-        type: 3}
-      propertyPath: elements.Array.data[1]
-      value: 
-      objectReference: {fileID: 609038705}
     - target: {fileID: 114636638081852210, guid: 114b3c3ce4645364a97c8f0803bed65b,
         type: 3}
       propertyPath: cameraRigs.Array.size
@@ -27421,6 +27541,21 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 960702652617744129, guid: 114b3c3ce4645364a97c8f0803bed65b,
+        type: 3}
+      propertyPath: elements.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 960702652617744129, guid: 114b3c3ce4645364a97c8f0803bed65b,
+        type: 3}
+      propertyPath: elements.Array.data[0]
+      value: 
+      objectReference: {fileID: 747871747}
+    - target: {fileID: 960702652617744129, guid: 114b3c3ce4645364a97c8f0803bed65b,
+        type: 3}
+      propertyPath: elements.Array.data[1]
+      value: 
+      objectReference: {fileID: 609038705}
     - target: {fileID: 7339820837269103390, guid: 114b3c3ce4645364a97c8f0803bed65b,
         type: 3}
       propertyPath: m_RootOrder

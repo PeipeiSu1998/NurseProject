@@ -3,13 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using VRTK;
 using VRTK.Prefabs.CameraRig.UnityXRCameraRig.Input;
+using UnityEngine.SceneManagement;
 
 public class MenuButtons : MonoBehaviour
 {
-    public GameObject gameObject;
-
-    public GameObject validCube;
-    public UnityButtonAction unityButtonAction;
 
     // Start is called before the first frame update
     void Start()
@@ -23,14 +20,18 @@ public class MenuButtons : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void ChangeScene()
     {
-        if (validCube.activeSelf)
+        Debug.Log(gameObject.tag);
+        if (gameObject.CompareTag("Tutorial"))
         {
-            if (other.gameObject.CompareTag("Exist"))
-            {
-                gameObject.SetActive(false);
-            }
+            SceneManager.LoadScene("Tutorial");
+        }else if (gameObject.CompareTag("Test"))
+        {
+            SceneManager.LoadScene("Test");
+        }else if (gameObject.CompareTag("Quit"))
+        {
+            Debug.Log("Quit");
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using VRTK.Prefabs.CameraRig.UnityXRCameraRig.Input;
 using VRTK.Prefabs.Interactions.Interactables;
+using Zinnia.Data.Type.Transformation.Conversion;
 
 public class ButtonAction : MonoBehaviour
 {
@@ -27,9 +28,9 @@ public class ButtonAction : MonoBehaviour
 
     public void OnTriggerStay(Collider other)
     {
-        foreach (ControllerStateManager c in controllerStateManagers)
+              foreach (ControllerStateManager c in controllerStateManagers)
         {
-            if (c.triggerTouched)
+              if (c.triggerPressed)
             {
                 if (gameObject.name == "Button1")
                 {

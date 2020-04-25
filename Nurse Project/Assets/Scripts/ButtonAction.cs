@@ -28,46 +28,49 @@ public class ButtonAction : MonoBehaviour
 
     public void OnTriggerStay(Collider other)
     {
-              foreach (ControllerStateManager c in controllerStateManagers)
+        if (other.gameObject.name == "left_touch_controller_model_skel" || other.gameObject.name == "right_touch_controller_model_skel")
         {
-              if (c.triggerPressed)
+            foreach (ControllerStateManager c in controllerStateManagers)
             {
-                if (gameObject.name == "Button1")
+                if (c.triggerPressed)
                 {
-                    materasso_head_animator.SetBool("up", true);
-                    materasso_thigh_animator.SetBool("tilt", true);
-                    materasso_leg_animator.SetBool("tilt", true);
-                    materasso_leg_animator.SetBool("up", false);
+                    if (gameObject.name == "Button1")
+                    {
+                        materasso_head_animator.SetBool("up", true);
+                        materasso_thigh_animator.SetBool("tilt", true);
+                        materasso_leg_animator.SetBool("tilt", true);
+                        materasso_leg_animator.SetBool("up", false);
+                    }
+                    else if (gameObject.name == "Button2")
+                    {
+                        materasso_head_animator.SetBool("up", true);
+                        materasso_thigh_animator.SetBool("tilt", false);
+                        materasso_leg_animator.SetBool("tilt", false);
+                        materasso_leg_animator.SetBool("up", false);
+                    }
+                    else if (gameObject.name == "Button3")
+                    {
+                        materasso_head_animator.SetBool("up", false);
+                        materasso_thigh_animator.SetBool("tilt", true);
+                        materasso_leg_animator.SetBool("tilt", true);
+                        materasso_leg_animator.SetBool("up", false);
+                    }
+                    else if (gameObject.name == "Button4")
+                    {
+                        materasso_head_animator.SetBool("up", false);
+                        materasso_thigh_animator.SetBool("tilt", true);
+                        materasso_leg_animator.SetBool("up", true);
+                        materasso_leg_animator.SetBool("tilt", false);
+                    }
+                    else if (gameObject.name == "Button5")
+                    {
+                        materasso_head_animator.SetBool("up", false);
+                        materasso_thigh_animator.SetBool("tilt", false);
+                        materasso_leg_animator.SetBool("tilt", false);
+                        materasso_leg_animator.SetBool("up", false);
+                    }
+                    Debug.Log("Button Pressed");
                 }
-                else if (gameObject.name == "Button2")
-                {
-                    materasso_head_animator.SetBool("up", true);
-                    materasso_thigh_animator.SetBool("tilt", false);
-                    materasso_leg_animator.SetBool("tilt", false);
-                    materasso_leg_animator.SetBool("up", false);
-                }
-                else if (gameObject.name == "Button3")
-                {
-                    materasso_head_animator.SetBool("up", false);
-                    materasso_thigh_animator.SetBool("tilt", true);
-                    materasso_leg_animator.SetBool("tilt", true);
-                    materasso_leg_animator.SetBool("up", false);
-                }
-                else if (gameObject.name == "Button4")
-                {
-                    materasso_head_animator.SetBool("up", false);
-                    materasso_thigh_animator.SetBool("tilt", true);
-                    materasso_leg_animator.SetBool("up", true);
-                    materasso_leg_animator.SetBool("tilt", false);
-                }
-                else if (gameObject.name == "Button5")
-                {
-                    materasso_head_animator.SetBool("up", false);
-                    materasso_thigh_animator.SetBool("tilt", false);
-                    materasso_leg_animator.SetBool("tilt", false);
-                    materasso_leg_animator.SetBool("up", false);
-                }
-                Debug.Log("Button Pressed");
             }
         }
     }

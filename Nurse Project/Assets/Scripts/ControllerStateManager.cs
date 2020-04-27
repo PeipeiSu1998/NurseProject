@@ -6,6 +6,7 @@ public class ControllerStateManager : MonoBehaviour
 {
     public bool triggerTouched;
     public bool triggerPressed;
+    public GameObject label;
 
     private void Awake()
     {
@@ -31,5 +32,17 @@ public class ControllerStateManager : MonoBehaviour
     public void TirggerNotPressed()
     {
         triggerPressed = false;
+    }
+
+    public void labelShowAndHide()
+    {
+        if (label.activeSelf)
+        {
+            label.SetActive(false);
+        }
+        else
+        {
+            label.SetActive(true);
+        }
     }
 }

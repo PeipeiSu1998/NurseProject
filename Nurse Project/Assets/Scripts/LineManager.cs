@@ -21,8 +21,10 @@ public class LineManager : MonoBehaviour
 		lr.material = new Material(Shader.Find("Sprites/Default"));
 		lr.SetColors(color, color);
 		lr.SetWidth(0.005f, 0.005f);
-		lr.SetPosition(0, start);
-		lr.SetPosition(1, end);
+        Vector3 startAdjusted = new Vector3(start.x, start.y + 2, start.z);
+        		lr.SetPosition(0, start);
+ //       lr.SetPosition(0, startAdjusted);
+        lr.SetPosition(1, end);
 		GameObject.Destroy(myLine, duration);
 	}
 }

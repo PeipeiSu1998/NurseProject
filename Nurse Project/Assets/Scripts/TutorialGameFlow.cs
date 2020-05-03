@@ -13,6 +13,7 @@ public class TutorialGameFlow : MonoBehaviour
     public bool button3;
     public bool button4;
     public bool button5;
+    public GameObject sceneChanger;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +31,10 @@ public class TutorialGameFlow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (instruction && teleport && grab && snapdropzone && button1 && button2 && button3 && button4 && button5)
+        {
+            sceneChanger.SetActive(true);
+        }
     }
 
     public void InstructionButtonDone()

@@ -77,8 +77,6 @@ public class TutorialGameFlow : MonoBehaviour
         {
             button1 = true;
             displayedText.text = "Please use the trigger on your controller to click the first button. You can use it to put the patient in the Fowlers position. It can help with difficulties with breathing or dyspnoe.";
-
-            Debug.Log("instruction: " + instruction + ", teleport: " + teleport + ", grab: " + grab + ", snapdropzone: " + snapdropzone);
         }
     }
 
@@ -88,8 +86,6 @@ public class TutorialGameFlow : MonoBehaviour
         {
             button2 = true;
             displayedText.text = "Now click the second button. You can use it to regulate Fowlers position to a lower or higher position for the upper body. It can prevent naucea, stop nosebleeding by preventing high blood pressure in the head/nose area or help with a night cough.";
-
-            Debug.Log("instruction: " + instruction + ", teleport: " + teleport + ", grab: " + grab + ", snapdropzone: " + snapdropzone);
         }
     }
 
@@ -99,8 +95,6 @@ public class TutorialGameFlow : MonoBehaviour
         {
             button3 = true;
             displayedText.text = "Now click the third button. You can use it to regulate Fowlers position to a lower position for the lower body. It can ease pain in legs, so you can use it when you are giving the patient a compression on the legs.";
-
-            Debug.Log("instruction: " + instruction + ", teleport: " + teleport + ", grab: " + grab + ", snapdropzone: " + snapdropzone);
         }
     }
 
@@ -110,8 +104,6 @@ public class TutorialGameFlow : MonoBehaviour
         {
             button4 = true;
             displayedText.text = "Now click the fourth button. Use it for legs with oedema, it helps blod in legs to pass towards the heart which eases the pressure and prevents/eases the oedema.";
-
-            Debug.Log("instruction: " + instruction + ", teleport: " + teleport + ", grab: " + grab + ", snapdropzone: " + snapdropzone);
         }
     }
 
@@ -121,8 +113,6 @@ public class TutorialGameFlow : MonoBehaviour
         {
             button5 = true;
             displayedText.text = "Now click the fifth button. The bed will return to its original position.";
-
-            Debug.Log("instruction: " + instruction + ", teleport: " + teleport + ", grab: " + grab + ", snapdropzone: " + snapdropzone);
         }
     }
 

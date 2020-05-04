@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9972,15 +9972,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   labels:
-  - {fileID: 0}
   - {fileID: 1149419625}
-  - {fileID: 0}
-  - {fileID: 0}
   buttons:
-  - {fileID: 702754675}
-  - {fileID: 1081360585}
-  - {fileID: 219712414}
-  - {fileID: 1593530929}
+  - {fileID: 231822596}
 --- !u!1 &112456461
 GameObject:
   m_ObjectHideFlags: 0
@@ -11194,6 +11188,12 @@ Transform:
   m_Father: {fileID: 993859180}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &231822596 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100018, guid: 45137ecb2b0f9ba45b80adefb16de509,
+    type: 3}
+  m_PrefabInstance: {fileID: 698810767}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &233897683 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5371755892253122220, guid: 4d59fbab1c4ee044c8113025ad94de18,

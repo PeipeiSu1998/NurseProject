@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -13834,6 +13834,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tutorialGameFlow: {fileID: 2020300274}
+  controllerStateManagers:
+  - {fileID: 1771913506}
+  - {fileID: 889851164}
 --- !u!1 &551025326
 GameObject:
   m_ObjectHideFlags: 0
@@ -18227,6 +18230,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tutorialGameFlow: {fileID: 2020300274}
+  controllerStateManagers:
+  - {fileID: 1771913506}
+  - {fileID: 889851164}
 --- !u!114 &894990163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20580,6 +20586,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tutorialGameFlow: {fileID: 2020300274}
+  controllerStateManagers:
+  - {fileID: 1771913506}
+  - {fileID: 889851164}
 --- !u!114 &1054282510 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6759483569300406686, guid: 52f87534fdefc6b47aadeae3a66454d8,
@@ -24761,6 +24770,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tutorialGameFlow: {fileID: 2020300274}
+  controllerStateManagers:
+  - {fileID: 1771913506}
+  - {fileID: 889851164}
 --- !u!1 &1436424241
 GameObject:
   m_ObjectHideFlags: 0
@@ -29707,6 +29719,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tutorialGameFlow: {fileID: 2020300274}
+  controllerStateManagers:
+  - {fileID: 1771913506}
+  - {fileID: 889851164}
 --- !u!1 &1879263336
 GameObject:
   m_ObjectHideFlags: 0

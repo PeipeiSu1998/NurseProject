@@ -10,6 +10,7 @@ public class ScenarioButtonInteraction : MonoBehaviour
     private string buttonName;
     public delegate void MyDelegate(string x);
     public static MyDelegate chooseName;
+    private int correctCounter;
     private void OnEnable() {
         chooseName += SetButtonName;
     }
@@ -24,7 +25,9 @@ public class ScenarioButtonInteraction : MonoBehaviour
         if (other.gameObject.name == "left_touch_controller_model_skel" || other.gameObject.name == "right_touch_controller_model_skel")
         {
             if(this.gameObject.name.Equals(buttonName))
-                TestScenarioManager.choosingScenario();
+                TestScenarioManager.choosingScenario(1);
+            else
+                TestScenarioManager.choosingScenario(-1);
         }
     }
 }

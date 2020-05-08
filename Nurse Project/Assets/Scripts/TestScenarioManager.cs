@@ -2,14 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TestScenarioManager : MonoBehaviour
 {
         public Text text;
     public GameObject[] buttons;
+    public GameObject correct;
+    public GameObject incorrect;
     private string script;
-    public delegate void MyDelegate();
+    public delegate void MyDelegate(int i);
     public static MyDelegate choosingScenario;
+    private int correctCounter;
     private void OnEnable() {
         choosingScenario += ChooseScenario;
     }
@@ -17,10 +21,17 @@ public class TestScenarioManager : MonoBehaviour
         choosingScenario -= ChooseScenario;
     }
     private void Start() {
-        ChooseScenario();
+        ChooseScenario(0);
     }
 
-    public void ChooseScenario(){
+    public void ChooseScenario(int num){
+        correctCounter += num;
+        if((GameModeHolder.Instance.mode == GameMode.normal && correctCounter == 5) || (GameModeHolder.Instance.mode == GameMode.survival && num == -1))
+            SceneManager.LoadScene("Main Menu");
+        if(num == 1)
+            ActivateGameObjectForaWhile(correct);
+        else if(num == -1)
+            ActivateGameObjectForaWhile(incorrect);
         int caseNo = Random.Range(0, 6);
         switch(caseNo){
             case 0:
@@ -53,6 +64,10 @@ public class TestScenarioManager : MonoBehaviour
                 break;
         }
         text.text = script;
-
+    }
+    public IEnumerator ActivateGameObjectForaWhile(GameObject go){
+        go.SetActive(true);
+        yield return new WaitForSeconds(2);
+        go.SetActive(false);
     }
 }

@@ -7,30 +7,27 @@ using UnityEngine.SceneManagement;
 
 public class MenuButtons : MonoBehaviour
 {
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void ChangeScene()
     {
         Debug.Log(gameObject.tag);
         if (gameObject.CompareTag("Tutorial"))
         {
             SceneManager.LoadScene("Tutorial");
-        }else if (gameObject.CompareTag("Test"))
+        }else if (gameObject.CompareTag("TestSingle"))
         {
+            GameModeHolder.Instance.mode = GameMode.normal;
+            SceneManager.LoadScene("Test");
+        }else if (gameObject.CompareTag("TestSurvival"))
+        {
+            GameModeHolder.Instance.mode = GameMode.survival;
             SceneManager.LoadScene("Test");
         }else if (gameObject.CompareTag("Quit"))
         {
+            #if UNITY_EDITOR
+        	UnityEditor.EditorApplication.isPlaying = false;
+            #else
+                Application.Quit ();
+            #endif
             Debug.Log("Quit");
         }
     }

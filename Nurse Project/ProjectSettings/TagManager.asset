@@ -9,6 +9,8 @@ TagManager:
   - Test
   - Quit
   - PointerValidCube
+  - TestSingle
+  - TestSurvival
   layers:
   - Default
   - TransparentFX

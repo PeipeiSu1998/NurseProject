@@ -29,11 +29,11 @@ public class TestScenarioManager : MonoBehaviour
         if((GameModeHolder.Instance.mode == GameMode.normal && correctCounter == 5) || (GameModeHolder.Instance.mode == GameMode.survival && num == -1))
             SceneManager.LoadScene("Main Menu");
         if(num == 1)
-            ActivateGameObjectForaWhile(correct);
+            StartCoroutine(ActivateGameObjectForaWhile(correct));
         else if(num == -1)
-            ActivateGameObjectForaWhile(incorrect);
+            StartCoroutine(ActivateGameObjectForaWhile(incorrect));
         if(num != -1){
-        int caseNo = Random.Range(0, 6);
+            int caseNo = Random.Range(0, 6);
             switch(caseNo){
                 case 0:
                     script = "Your patient has difficulties with breathing. Adjust the bed accordingly.";
@@ -69,7 +69,7 @@ public class TestScenarioManager : MonoBehaviour
     }
     public IEnumerator ActivateGameObjectForaWhile(GameObject go){
         go.SetActive(true);
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(5);
         go.SetActive(false);
     }
 }

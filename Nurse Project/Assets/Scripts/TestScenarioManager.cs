@@ -32,7 +32,7 @@ public class TestScenarioManager : MonoBehaviour
             ActivateGameObjectForaWhile(correct);
         else if(num == -1)
             ActivateGameObjectForaWhile(incorrect);
-        if(num == 1){
+        if(num != -1){
         int caseNo = Random.Range(0, 6);
             switch(caseNo){
                 case 0:

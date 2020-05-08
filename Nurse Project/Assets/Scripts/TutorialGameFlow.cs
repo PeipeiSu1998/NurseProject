@@ -105,7 +105,7 @@ public class TutorialGameFlow : MonoBehaviour
         if(button2 && !button3)
         {
             button3 = true;
-            displayedText.text = "Now click the fourth button. Use it for legs with oedema, it helps blod in legs to pass towards the heart which eases the pressure and prevents/eases the oedema.";
+            displayedText.text = "Now click the fourth button. Use it for legs with edema, it helps blod in legs to pass towards the heart which eases the pressure and prevents/eases the oedema.";
         }
     }
 

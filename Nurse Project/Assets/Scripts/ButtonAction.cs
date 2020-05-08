@@ -13,19 +13,6 @@ public class ButtonAction : MonoBehaviour
     public Animator materasso_leg_animator;
     public List<ControllerStateManager> controllerStateManagers;
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        buttonTransform = GetComponent<Transform>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void OnTriggerStay(Collider other)
     {
         if (other.gameObject.name == "left_touch_controller_model_skel" || other.gameObject.name == "right_touch_controller_model_skel")

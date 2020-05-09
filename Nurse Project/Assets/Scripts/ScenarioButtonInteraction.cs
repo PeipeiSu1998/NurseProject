@@ -22,12 +22,15 @@ public class ScenarioButtonInteraction : MonoBehaviour
     }
     public void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.name == "left_touch_controller_model_skel" || other.gameObject.name == "right_touch_controller_model_skel")
-        {
-            if(this.gameObject.name.Equals(buttonName))
-                TestScenarioManager.choosingScenario(1);
-            else
-                TestScenarioManager.choosingScenario(-1);
+        if (other.gameObject.name == "left_touch_controller_model_skel" || other.gameObject.name == "right_touch_controller_model_skel"){
+            foreach (ControllerStateManager c in controllerStateManagers){
+                if (c.triggerPressed){
+                    if(this.gameObject.name.Equals(buttonName))
+                        TestScenarioManager.choosingScenario(1);
+                    else
+                        TestScenarioManager.choosingScenario(-1);
+                }
+            }
         }
     }
 }

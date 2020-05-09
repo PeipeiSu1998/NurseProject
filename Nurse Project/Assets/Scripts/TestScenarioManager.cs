@@ -68,6 +68,8 @@ public class TestScenarioManager : MonoBehaviour
         }
     }
     public IEnumerator ActivateGameObjectForaWhile(GameObject go){
+        correct.SetActive(false);
+        incorrect.SetActive(false);
         go.SetActive(true);
         yield return new WaitForSeconds(1);
         go.SetActive(false);

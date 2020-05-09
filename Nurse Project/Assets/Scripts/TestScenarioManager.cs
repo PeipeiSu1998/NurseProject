@@ -21,7 +21,7 @@ public class TestScenarioManager : MonoBehaviour
         choosingScenario -= ChooseScenarioFlow;
     }
     private void Start() {
-        ChooseScenario(0);
+        ChooseScenarioFlow(0);
     }
 
     public void ChooseScenarioFlow(int num){

@@ -11,6 +11,8 @@ public class ScenarioButtonInteraction : MonoBehaviour
     public delegate void MyDelegate(string x);
     public static MyDelegate chooseName;
     private int correctCounter;
+    public List<ControllerStateManager> controllerStateManagers;
+
     private void OnEnable() {
         chooseName += SetButtonName;
     }
@@ -20,7 +22,7 @@ public class ScenarioButtonInteraction : MonoBehaviour
     public void SetButtonName(string name){
         buttonName = name;
     }
-    public void OnTriggerExit(Collider other)
+    public void OnTriggerStay(Collider other)
     {
         if (other.gameObject.name == "left_touch_controller_model_skel" || other.gameObject.name == "right_touch_controller_model_skel"){
             foreach (ControllerStateManager c in controllerStateManagers){

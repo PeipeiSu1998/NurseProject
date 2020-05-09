@@ -11,6 +11,7 @@ public class ScenarioButtonInteraction : MonoBehaviour
     public delegate void MyDelegate(string x);
     public static MyDelegate chooseName;
     private int correctCounter;
+    private bool wasClicked;
     public List<ControllerStateManager> controllerStateManagers;
 
     private void OnEnable() {
@@ -26,7 +27,8 @@ public class ScenarioButtonInteraction : MonoBehaviour
     {
         if (other.gameObject.name == "left_touch_controller_model_skel" || other.gameObject.name == "right_touch_controller_model_skel"){
             foreach (ControllerStateManager c in controllerStateManagers){
-                if (c.triggerPressed){
+                if (c.triggerPressed && !wasClicked){
+                    wasClicked = true;
                     if(this.gameObject.name.Equals(buttonName))
                         TestScenarioManager.choosingScenario(1);
                     else
@@ -34,5 +36,8 @@ public class ScenarioButtonInteraction : MonoBehaviour
                 }
             }
         }
+        else
+            wasClicked = false;
+
     }
 }

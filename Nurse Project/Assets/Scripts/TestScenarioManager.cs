@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class TestScenarioManager : MonoBehaviour
 {
-        public Text text;
+    public Text text;
     public GameObject[] buttons;
     public GameObject correct;
     public GameObject incorrect;

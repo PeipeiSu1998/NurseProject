@@ -15,16 +15,16 @@ public class TestScenarioManager : MonoBehaviour
     public static MyDelegate choosingScenario;
     private int correctCounter;
     private void OnEnable() {
-        choosingScenario += ChooseScenario;
+        choosingScenario += ChooseScenarioFlow;
     }
     private void OnDisable() {
-        choosingScenario -= ChooseScenario;
+        choosingScenario -= ChooseScenarioFlow;
     }
     private void Start() {
         ChooseScenario(0);
     }
 
-    public void ChooseScenario(int num){
+    public void ChooseScenarioFlow(int num){
         correctCounter += num;
         if((GameModeHolder.Instance.mode == GameMode.normal && correctCounter == 5) || (GameModeHolder.Instance.mode == GameMode.survival && num == -1))
             SceneManager.LoadScene("Main Menu");
@@ -33,7 +33,12 @@ public class TestScenarioManager : MonoBehaviour
         else if(num == -1)
             StartCoroutine(ActivateGameObjectForaWhile(incorrect));
         if(num != -1){
-            int caseNo = Random.Range(0, 6);
+            ChooseScenario(num);
+        }
+    }
+    private IEnumerator ChooseScenario(int time){
+        yield return new WaitForSeconds(time);
+        int caseNo = Random.Range(0, 6);
             switch(caseNo){
                 case 0:
                     script = "Your patient has difficulties with breathing. Adjust the bed accordingly.";
@@ -65,7 +70,6 @@ public class TestScenarioManager : MonoBehaviour
                     break;
             }
             text.text = script;
-        }
     }
     public IEnumerator ActivateGameObjectForaWhile(GameObject go){
         correct.SetActive(false);
@@ -74,4 +78,5 @@ public class TestScenarioManager : MonoBehaviour
         yield return new WaitForSeconds(1);
         go.SetActive(false);
     }
+    
 }

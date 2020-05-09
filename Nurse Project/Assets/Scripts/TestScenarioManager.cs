@@ -69,6 +69,7 @@ public class TestScenarioManager : MonoBehaviour
                     ScenarioButtonInteraction.chooseName("Button4");
                     break;
             }
+            script += "/nCorrect: "+correctCounter;
             text.text = script;
     }
     public IEnumerator ActivateGameObjectForaWhile(GameObject go){

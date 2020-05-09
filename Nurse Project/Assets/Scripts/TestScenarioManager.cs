@@ -33,7 +33,7 @@ public class TestScenarioManager : MonoBehaviour
         else if(num == -1)
             StartCoroutine(ActivateGameObjectForaWhile(incorrect));
         if(num != -1){
-            ChooseScenario(num);
+            StartCoroutine(ChooseScenario(num));
         }
     }
     private IEnumerator ChooseScenario(int time){

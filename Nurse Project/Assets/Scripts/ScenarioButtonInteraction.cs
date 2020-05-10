@@ -29,15 +29,9 @@ public class ScenarioButtonInteraction : MonoBehaviour
             foreach (ControllerStateManager c in controllerStateManagers){
                 if (c.triggerPressed && !wasClicked){
                     wasClicked = true;
-                    if(this.gameObject.name.Equals(buttonName))
-                        TestScenarioManager.choosingScenario(1);
-                    else
-                        TestScenarioManager.choosingScenario(-1);
                 }
             }
         }
-        else
-            wasClicked = false;
 
     }
     public void OnTriggerExit(Collider other)

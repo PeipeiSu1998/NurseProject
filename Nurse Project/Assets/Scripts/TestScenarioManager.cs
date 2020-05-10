@@ -12,19 +12,23 @@ public class TestScenarioManager : MonoBehaviour
     public GameObject incorrect;
     private string script;
     public delegate void MyDelegate(int i);
-    public static MyDelegate choosingScenario;
+    public static MyDelegate setNum;
     private int correctCounter;
+    private int num = 0;
     private void OnEnable() {
-        choosingScenario += ChooseScenarioFlow;
+        setNum += SetNum;
     }
     private void OnDisable() {
-        choosingScenario -= ChooseScenarioFlow;
+        setNum -= SetNum;
     }
     private void Start() {
-        ChooseScenarioFlow(0);
+        ChooseScenarioFlow();
+    }
+    public void SetNum(int num){
+        this.num = num;
     }
 
-    public void ChooseScenarioFlow(int num){
+    public void ChooseScenarioFlow(){
         correctCounter += num;
         // if((GameModeHolder.Instance.mode == GameMode.normal && correctCounter == 5) || (GameModeHolder.Instance.mode == GameMode.survival && num == -1))
         //     SceneManager.LoadScene("Main Menu");

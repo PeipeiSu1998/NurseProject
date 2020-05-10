@@ -13,7 +13,7 @@ public class FeedbackManager : MonoBehaviour
         if(feedback == "")
             feedbackHolder.gameObject.transform.parent.parent.gameObject.SetActive(false);
         else{
-            gameObject.transform.parent.gameObject.SetActive(true);
+            feedbackHolder.gameObject.transform.parent.gameObject.SetActive(true);
             feedbackHolder.text = feedback;
         }
     }

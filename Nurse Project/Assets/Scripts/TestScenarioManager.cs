@@ -14,6 +14,7 @@ public class TestScenarioManager : MonoBehaviour
     public delegate void MyDelegate(int i);
     public static MyDelegate setNum;
     private int correctCounter;
+    private int incorrectCounter;
     private int num = 0;
     private void OnEnable() {
         setNum += SetNum;
@@ -30,14 +31,18 @@ public class TestScenarioManager : MonoBehaviour
 
     public void ChooseScenarioFlow(){
         correctCounter += num;
-        if((GameModeHolder.Instance.mode == GameMode.normal && correctCounter == 5) || (GameModeHolder.Instance.mode == GameMode.survival && num == -1))
-            SceneManager.LoadScene("Main Menu");
         if(num == 1)
             StartCoroutine(ActivateGameObjectForaWhile(correct));
-        else if(num == -1)
+        else if(num == -1){
+            incorrectCounter++;
             StartCoroutine(ActivateGameObjectForaWhile(incorrect));
+        }
         if(num != -1){
             StartCoroutine(ChooseScenario(num));
+        }
+        if((GameModeHolder.Instance.mode == GameMode.normal && correctCounter == 5) || (GameModeHolder.Instance.mode == GameMode.survival && num == -1)){
+            GameModeHolder.Instance.SetFeedback(incorrectCounter);
+            SceneManager.LoadScene("Main Menu");
         }
     }
     private IEnumerator ChooseScenario(int time){

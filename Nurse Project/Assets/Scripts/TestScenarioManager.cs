@@ -30,8 +30,8 @@ public class TestScenarioManager : MonoBehaviour
 
     public void ChooseScenarioFlow(){
         correctCounter += num;
-        // if((GameModeHolder.Instance.mode == GameMode.normal && correctCounter == 5) || (GameModeHolder.Instance.mode == GameMode.survival && num == -1))
-        //     SceneManager.LoadScene("Main Menu");
+        if((GameModeHolder.Instance.mode == GameMode.normal && correctCounter == 5) || (GameModeHolder.Instance.mode == GameMode.survival && num == -1))
+            SceneManager.LoadScene("Main Menu");
         if(num == 1)
             StartCoroutine(ActivateGameObjectForaWhile(correct));
         else if(num == -1)

@@ -21,10 +21,10 @@ public class GameModeHolder : MonoBehaviour
  	}
 	 public void SetFeedback(int incorrect){
 		if(incorrect <= 2)
-			feedback = "Great job! ";
+			feedback = "Great job!";
 		else
-			feedback = "Good job, but maybe you should practice a bit more? ";
-		feedback += "You made " + incorrect + " mistakes.";
+			feedback = "Good job, but maybe you should practice a bit more?";
+		feedback += "/nYou made " + incorrect + " mistakes.";
 		 this.feedback = feedback;
 	 }
 	 public string GetFeedback(){

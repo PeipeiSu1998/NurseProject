@@ -71,7 +71,6 @@ public class TestScenarioManager : MonoBehaviour
             }
             script += "/nCorrect: "+correctCounter;
             text.text = script;
-            return null;
     }
     public IEnumerator ActivateGameObjectForaWhile(GameObject go){
         correct.SetActive(false);
@@ -79,7 +78,6 @@ public class TestScenarioManager : MonoBehaviour
         go.SetActive(true);
         yield return new WaitForSeconds(1);
         go.SetActive(false);
-        return null;
     }
     
 }

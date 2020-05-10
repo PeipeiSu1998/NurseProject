@@ -40,4 +40,16 @@ public class ScenarioButtonInteraction : MonoBehaviour
             wasClicked = false;
 
     }
+    public void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.name == "left_touch_controller_model_skel" || other.gameObject.name == "right_touch_controller_model_skel"){
+            if(wasClicked){
+                wasClicked = false;
+                if(this.gameObject.name.Equals(buttonName))
+                    TestScenarioManager.choosingScenario(1);
+                else
+                    TestScenarioManager.choosingScenario(-1);
+            }
+        }
+    }
 }

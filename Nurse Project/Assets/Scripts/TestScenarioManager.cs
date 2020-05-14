@@ -16,7 +16,7 @@ public class TestScenarioManager : MonoBehaviour
     private void OnDisable() {
         ScenarioButtonInteraction.inputGiven -= SetNum;
     }
-    private void Start() {
+    private void Awake() {
         ChooseScenarioFlow();
     }
     public void SetNum(int num){

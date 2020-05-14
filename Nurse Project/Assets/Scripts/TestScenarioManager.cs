@@ -2,25 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class TestScenarioManager : MonoBehaviour
 {
     public Text text;
     public GameObject[] buttons;
-    public GameObject correct;
-    public GameObject incorrect;
     private string script;
-    public delegate void MyDelegate(int i);
-    public static MyDelegate setNum;
-    private int correctCounter;
-    private int incorrectCounter;
     private int num = 0;
+    private AnswerManager answerManager;
     private void OnEnable() {
-        setNum += SetNum;
+        ScenarioButtonInteraction.inputGiven += SetNum;
     }
     private void OnDisable() {
-        setNum -= SetNum;
+        ScenarioButtonInteraction.inputGiven -= SetNum;
     }
     private void Start() {
         ChooseScenarioFlow();
@@ -28,21 +22,10 @@ public class TestScenarioManager : MonoBehaviour
     public void SetNum(int num){
         this.num = num;
     }
-
     public void ChooseScenarioFlow(){
-        correctCounter += num;
-        if(num == 1)
-            StartCoroutine(ActivateGameObjectForaWhile(correct));
-        else if(num == -1){
-            incorrectCounter++;
-            StartCoroutine(ActivateGameObjectForaWhile(incorrect));
-        }
+        answerManager.Count(num);
         if(num != -1){
             StartCoroutine(ChooseScenario(num));
-        }
-        if((GameModeHolder.Instance.mode == GameMode.normal && correctCounter == 5) || (GameModeHolder.Instance.mode == GameMode.survival && num == -1)){
-            GameModeHolder.Instance.SetFeedback(incorrectCounter);
-            SceneManager.LoadScene("Main Menu");
         }
     }
     private IEnumerator ChooseScenario(int time){
@@ -78,15 +61,7 @@ public class TestScenarioManager : MonoBehaviour
                     ScenarioButtonInteraction.chooseName("Button4");
                     break;
             }
-            script += "/nCorrect: "+correctCounter;
+            script += "/nCorrect: " + answerManager.GetCorrect();
             text.text = script;
     }
-    public IEnumerator ActivateGameObjectForaWhile(GameObject go){
-        correct.SetActive(false);
-        incorrect.SetActive(false);
-        go.SetActive(true);
-        yield return new WaitForSeconds(1);
-        go.SetActive(false);
-    }
-    
 }

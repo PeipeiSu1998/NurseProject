@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class LineManager : MonoBehaviour
 {
@@ -11,9 +9,10 @@ public class LineManager : MonoBehaviour
 
 	void Update () {
 		for(int i = 0; i < buttons.Length; i++)
-			DrawLine(labels[i].transform.position, buttons[i].transform.position, Color.black);
+			DrawLine(labels[i].transform.position, buttons[i].transform.position);
     }
-	void DrawLine(Vector3 start, Vector3 end, Color color, float duration = 0.018f){
+	public void DrawLine(Vector3 start, Vector3 end, float duration = 0.018f){
+		Color color = Color.black;
 		GameObject myLine = new GameObject();
 		myLine.transform.position = start;
 		myLine.AddComponent<LineRenderer>();
@@ -21,9 +20,7 @@ public class LineManager : MonoBehaviour
 		lr.material = new Material(Shader.Find("Sprites/Default"));
 		lr.SetColors(color, color);
 		lr.SetWidth(0.005f, 0.005f);
-        Vector3 startAdjusted = new Vector3(start.x, start.y + 2, start.z);
-        		lr.SetPosition(0, start);
- //       lr.SetPosition(0, startAdjusted);
+        lr.SetPosition(0, start);
         lr.SetPosition(1, end);
 		GameObject.Destroy(myLine, duration);
 	}

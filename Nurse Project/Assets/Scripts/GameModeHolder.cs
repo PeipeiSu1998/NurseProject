@@ -1,7 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+public enum GameMode
+{
+    normal, survival
+}
 public class GameModeHolder : MonoBehaviour
 {
     public GameMode mode;
@@ -19,12 +22,13 @@ public class GameModeHolder : MonoBehaviour
 		}
         DontDestroyOnLoad(this);
  	}
-	 public void SetFeedback(int incorrect){
-		if(incorrect <= 2)
+	 //Set feedback for the user. If the mode is normal the num is amount of incorrect answers, otherwise it is the number of correct answers.
+	 public void SetFeedback(int num){
+		if((num <= 2 && mode == GameMode.normal) || (num >= 5 && mode == GameMode.survival))
 			feedback = "Great job!";
 		else
 			feedback = "Good job, but maybe you should practice a bit more?";
-		feedback += "/nYou made " + incorrect + " mistakes.";
+		feedback += mode == GameMode.normal ? "/nYou made " + num + " mistakes." : "/nYou got " + num + "correct.";
 		 this.feedback = feedback;
 	 }
 	 public string GetFeedback(){

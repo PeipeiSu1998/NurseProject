@@ -17,6 +17,7 @@ public class TestScenarioManager : MonoBehaviour
         ScenarioButtonInteraction.inputGiven -= SetNum;
     }
     private void Start() {
+        answerManager = new AnswerManager();
         ChooseScenarioFlow();
     }
     public void SetNum(int num){

@@ -19,7 +19,7 @@ public class LineManager : MonoBehaviour
 		LineRenderer lr = myLine.GetComponent<LineRenderer>();
 		lr.material = new Material(Shader.Find("Sprites/Default"));
 		lr.SetColors(color, color);
-		lr.SetWidth(0.005f, 0.005f);
+		lr.SetWidth(0.0025f, 0.0025f);
         lr.SetPosition(0, start);
         lr.SetPosition(1, end);
 		GameObject.Destroy(myLine, duration);

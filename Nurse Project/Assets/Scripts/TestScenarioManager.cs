@@ -62,7 +62,7 @@ public class TestScenarioManager : MonoBehaviour
                     ScenarioButtonInteraction.chooseName("Button4");
                     break;
             }
-            script += "/nCorrect: " + answerManager.GetCorrect();
+            script += "<br/>Correct: " + answerManager.GetCorrect();
             text.text = script;
     }
 }

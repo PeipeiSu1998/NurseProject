@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using VRTK.Prefabs.CameraRig.UnityXRCameraRig.Input;
 using VRTK.Prefabs.Interactions.Interactables;

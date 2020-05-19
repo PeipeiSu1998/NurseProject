@@ -2,7 +2,7 @@
 
 public class LabelManager : MonoBehaviour
 {
-    void Update(){
+    private void Update(){
         transform.LookAt(Camera.main.gameObject.transform);
     }
 }

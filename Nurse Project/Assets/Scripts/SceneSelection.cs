@@ -5,19 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class SceneSelection : MonoBehaviour
 {
-    public List<ControllerStateManager> controllerStateManagers; 
+    //public List<ControllerStateManager> controllerStateManagers; 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     /*   private void OnCollisionStay(Collision collision)
        {

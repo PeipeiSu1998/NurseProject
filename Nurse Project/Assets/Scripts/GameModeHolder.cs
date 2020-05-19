@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 public enum GameMode
 {
     normal, survival
@@ -13,7 +11,7 @@ public class GameModeHolder : MonoBehaviour
  	public static GameModeHolder Instance {
  	    get { return instance; }
  	}
- 	void Awake() {
+ 	private void Awake() {
  	    if (instance != null && instance != this) {
  	        Destroy(this.gameObject);
  	        return;

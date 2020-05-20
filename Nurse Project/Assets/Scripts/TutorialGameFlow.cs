@@ -14,7 +14,7 @@ public class TutorialGameFlow : MonoBehaviour
     public bool button3;
     public bool button4;
     public bool button5;
-    public GameObject sceneChanger;
+    public List<GameObject> sceneChangers;
     public Text displayedText;
 
     void Start()
@@ -34,7 +34,10 @@ public class TutorialGameFlow : MonoBehaviour
     {
         if (instruction && teleport && grab && snapdropzone && button1 && button2 && button3 && button4 && button5)
         {
-            sceneChanger.SetActive(true);
+            foreach(GameObject g in sceneChangers)
+            {
+                g.SetActive(true);
+            }
         }
     }
 

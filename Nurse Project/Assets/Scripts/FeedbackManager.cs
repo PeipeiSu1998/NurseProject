@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class FeedbackManager : MonoBehaviour
 {
-    public Text feedbackHolder;
+    public TextMeshProUGUI feedbackHolder;
     private string feedback;
     void Start()
     {

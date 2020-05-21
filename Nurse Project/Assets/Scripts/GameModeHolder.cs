@@ -26,7 +26,7 @@ public class GameModeHolder : MonoBehaviour
 			feedback = "Great job!";
 		else
 			feedback = "Good job, but maybe you should practice a bit more?";
-		feedback += mode == GameMode.normal ? "/nYou made " + num + " mistakes." : "/nYou got " + num + "correct.";
+		feedback += mode == GameMode.normal ? "<br/>You made " + num + " mistakes." : "<br/>You got " + num + "correct.";
 		 this.feedback = feedback;
 	 }
 	 public string GetFeedback(){

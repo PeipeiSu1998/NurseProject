@@ -6,7 +6,7 @@ public enum GameMode
 public class GameModeHolder : MonoBehaviour
 {
     public GameMode mode;
-	public string feedback = "";
+	private string feedback = "";
     private static GameModeHolder instance = null;
  	public static GameModeHolder Instance {
  	    get { return instance; }

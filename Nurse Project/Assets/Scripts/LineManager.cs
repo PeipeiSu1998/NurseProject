@@ -7,7 +7,7 @@ public class LineManager : MonoBehaviour
     [SerializeField]
 	private GameObject[] buttons;
 
-	void Update () {
+	private void Update () {
 		for(int i = 0; i < buttons.Length; i++)
 			DrawLine(labels[i].transform.position, buttons[i].transform.position);
     }

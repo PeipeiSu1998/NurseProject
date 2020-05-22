@@ -32,7 +32,7 @@ public class ControllerStateManager : MonoBehaviour
         triggerPressed = false;
     }
 
-    public void labelShowAndHide()
+    public void LabelShowAndHide()
     {
         if (label.activeSelf)
         {

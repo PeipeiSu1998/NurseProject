@@ -6,7 +6,7 @@ public class FeedbackManager : MonoBehaviour
 {
     public TextMeshProUGUI feedbackHolder;
     private string feedback;
-    void Start()
+    private void Start()
     {
         feedback = GameModeHolder.Instance.GetFeedback();
         if(feedback == "")

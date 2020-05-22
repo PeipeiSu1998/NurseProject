@@ -60,10 +60,5 @@ public class ButtonAction : MonoBehaviour
             }
         }
     }
-
-    public void OnTriggerExit(Collider other)
-    {
-        Debug.Log("Button Release");
-    }
 }
 

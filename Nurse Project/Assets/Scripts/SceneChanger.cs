@@ -6,7 +6,6 @@ public class SceneChanger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.name == "left_touch_controller_model_skel" || other.gameObject.name == "right_touch_controller_model_skel") { 
- //           if(other.gameObject.name == "VRTK Prefabs")  {
             if (gameObject.name == "SceneChanger_Tutorial")
             {
                 Debug.Log("Tutorial");

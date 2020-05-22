@@ -17,7 +17,7 @@ public class TutorialGameFlow : MonoBehaviour
     public List<GameObject> sceneChangers;
     public Text displayedText;
 
-    void Start()
+    private void Start()
     {
         instruction = false;
         teleport = false;
@@ -30,7 +30,7 @@ public class TutorialGameFlow : MonoBehaviour
         button5 = false;
         displayedText.text = "Please click on A or X button in your controller to show the instructions";
     }
-    void Update()
+    private void Update()
     {
         if (instruction && teleport && grab && snapdropzone && button1 && button2 && button3 && button4 && button5)
         {
